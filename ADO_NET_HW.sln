@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_SallesDb", "01_SallesDb\01_SallesDb.csproj", "{D1358889-9896-469B-9F4B-0EBC876C5165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_MusicApp", "02_MusicApp\02_MusicApp.csproj", "{0D48ED98-8E1E-43CF-A9E3-86314335F731}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_MusicApp", "02_MusicApp\02_MusicApp.csproj", "{0D48ED98-8E1E-43CF-A9E3-86314335F731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Shop(CourseWork)", "03_Shop(CourseWork)\03_Shop(CourseWork).csproj", "{B24E12D0-2433-4A89-900B-42615E3D5EE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0D48ED98-8E1E-43CF-A9E3-86314335F731}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D48ED98-8E1E-43CF-A9E3-86314335F731}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D48ED98-8E1E-43CF-A9E3-86314335F731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B24E12D0-2433-4A89-900B-42615E3D5EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24E12D0-2433-4A89-900B-42615E3D5EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24E12D0-2433-4A89-900B-42615E3D5EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24E12D0-2433-4A89-900B-42615E3D5EE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
