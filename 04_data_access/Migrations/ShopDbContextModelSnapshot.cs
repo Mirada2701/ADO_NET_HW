@@ -52,7 +52,7 @@ namespace _03_Shop_CourseWork_.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
 
                     b.HasData(
                         new
@@ -92,7 +92,7 @@ namespace _03_Shop_CourseWork_.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("City");
+                    b.ToTable("Cities");
 
                     b.HasData(
                         new
@@ -160,7 +160,7 @@ namespace _03_Shop_CourseWork_.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
 
                     b.HasData(
                         new
@@ -195,7 +195,7 @@ namespace _03_Shop_CourseWork_.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Position");
+                    b.ToTable("Positions");
 
                     b.HasData(
                         new
@@ -247,7 +247,7 @@ namespace _03_Shop_CourseWork_.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Products");
 
                     b.HasData(
                         new
@@ -320,7 +320,7 @@ namespace _03_Shop_CourseWork_.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("Shop");
+                    b.ToTable("Shops");
 
                     b.HasData(
                         new
@@ -392,7 +392,7 @@ namespace _03_Shop_CourseWork_.Migrations
 
                     b.HasIndex("ShopId");
 
-                    b.ToTable("Worker");
+                    b.ToTable("Workers");
 
                     b.HasData(
                         new

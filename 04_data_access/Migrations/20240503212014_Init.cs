@@ -13,7 +13,7 @@ namespace _03_Shop_CourseWork_.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Category",
+                name: "Categories",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -22,11 +22,11 @@ namespace _03_Shop_CourseWork_.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Category", x => x.Id);
+                    table.PrimaryKey("PK_Categories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Country",
+                name: "Countries",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -35,11 +35,11 @@ namespace _03_Shop_CourseWork_.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Country", x => x.Id);
+                    table.PrimaryKey("PK_Countries", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Position",
+                name: "Positions",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -48,11 +48,11 @@ namespace _03_Shop_CourseWork_.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Position", x => x.Id);
+                    table.PrimaryKey("PK_Positions", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Product",
+                name: "Products",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -66,16 +66,16 @@ namespace _03_Shop_CourseWork_.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Product", x => x.Id);
+                    table.PrimaryKey("PK_Products", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Product_Category_CategoryId",
+                        name: "FK_Products_Categories_CategoryId",
                         column: x => x.CategoryId,
-                        principalTable: "Category",
+                        principalTable: "Categories",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "City",
+                name: "Cities",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -85,17 +85,17 @@ namespace _03_Shop_CourseWork_.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_City", x => x.Id);
+                    table.PrimaryKey("PK_Cities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_City_Country_CountryId",
+                        name: "FK_Cities_Countries_CountryId",
                         column: x => x.CountryId,
-                        principalTable: "Country",
+                        principalTable: "Countries",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Shop",
+                name: "Shops",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -107,11 +107,11 @@ namespace _03_Shop_CourseWork_.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Shop", x => x.Id);
+                    table.PrimaryKey("PK_Shops", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Shop_City_CityId",
+                        name: "FK_Shops_Cities_CityId",
                         column: x => x.CityId,
-                        principalTable: "City",
+                        principalTable: "Cities",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -127,21 +127,21 @@ namespace _03_Shop_CourseWork_.Migrations
                 {
                     table.PrimaryKey("PK_ProductShop", x => new { x.ProductsId, x.ShopsId });
                     table.ForeignKey(
-                        name: "FK_ProductShop_Product_ProductsId",
+                        name: "FK_ProductShop_Products_ProductsId",
                         column: x => x.ProductsId,
-                        principalTable: "Product",
+                        principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProductShop_Shop_ShopsId",
+                        name: "FK_ProductShop_Shops_ShopsId",
                         column: x => x.ShopsId,
-                        principalTable: "Shop",
+                        principalTable: "Shops",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Worker",
+                name: "Workers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -156,23 +156,23 @@ namespace _03_Shop_CourseWork_.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Worker", x => x.Id);
+                    table.PrimaryKey("PK_Workers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Worker_Position_PositionId",
+                        name: "FK_Workers_Positions_PositionId",
                         column: x => x.PositionId,
-                        principalTable: "Position",
+                        principalTable: "Positions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Worker_Shop_ShopId",
+                        name: "FK_Workers_Shops_ShopId",
                         column: x => x.ShopId,
-                        principalTable: "Shop",
+                        principalTable: "Shops",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
-                table: "Category",
+                table: "Categories",
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
@@ -182,7 +182,7 @@ namespace _03_Shop_CourseWork_.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Country",
+                table: "Countries",
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
@@ -192,7 +192,7 @@ namespace _03_Shop_CourseWork_.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Position",
+                table: "Positions",
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
@@ -202,7 +202,7 @@ namespace _03_Shop_CourseWork_.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "City",
+                table: "Cities",
                 columns: new[] { "Id", "CountryId", "Name" },
                 values: new object[,]
                 {
@@ -217,7 +217,7 @@ namespace _03_Shop_CourseWork_.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Product",
+                table: "Products",
                 columns: new[] { "Id", "CategoryId", "Discount", "IsInStock", "Name", "Price", "Quantity" },
                 values: new object[,]
                 {
@@ -228,7 +228,7 @@ namespace _03_Shop_CourseWork_.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Shop",
+                table: "Shops",
                 columns: new[] { "Id", "Address", "CityId", "Name", "ParkingArea" },
                 values: new object[,]
                 {
@@ -238,7 +238,7 @@ namespace _03_Shop_CourseWork_.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Worker",
+                table: "Workers",
                 columns: new[] { "Id", "Email", "Name", "PhoneNumber", "PositionId", "Salary", "ShopId", "Surname" },
                 values: new object[,]
                 {
@@ -248,13 +248,13 @@ namespace _03_Shop_CourseWork_.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_City_CountryId",
-                table: "City",
+                name: "IX_Cities_CountryId",
+                table: "Cities",
                 column: "CountryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Product_CategoryId",
-                table: "Product",
+                name: "IX_Products_CategoryId",
+                table: "Products",
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
@@ -263,18 +263,18 @@ namespace _03_Shop_CourseWork_.Migrations
                 column: "ShopsId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Shop_CityId",
-                table: "Shop",
+                name: "IX_Shops_CityId",
+                table: "Shops",
                 column: "CityId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Worker_PositionId",
-                table: "Worker",
+                name: "IX_Workers_PositionId",
+                table: "Workers",
                 column: "PositionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Worker_ShopId",
-                table: "Worker",
+                name: "IX_Workers_ShopId",
+                table: "Workers",
                 column: "ShopId");
         }
 
@@ -285,25 +285,25 @@ namespace _03_Shop_CourseWork_.Migrations
                 name: "ProductShop");
 
             migrationBuilder.DropTable(
-                name: "Worker");
+                name: "Workers");
 
             migrationBuilder.DropTable(
-                name: "Product");
+                name: "Products");
 
             migrationBuilder.DropTable(
-                name: "Position");
+                name: "Positions");
 
             migrationBuilder.DropTable(
-                name: "Shop");
+                name: "Shops");
 
             migrationBuilder.DropTable(
-                name: "Category");
+                name: "Categories");
 
             migrationBuilder.DropTable(
-                name: "City");
+                name: "Cities");
 
             migrationBuilder.DropTable(
-                name: "Country");
+                name: "Countries");
         }
     }
 }

@@ -16,5 +16,9 @@ namespace _03_Shop_CourseWork_.Entities
         public ICollection<Worker> Workers { get; set; }
         public int? ParkingArea { get; set; }
         public ICollection<Product> Products { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

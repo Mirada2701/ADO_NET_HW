@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_SallesDb", "01_SallesDb\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_MusicApp", "02_MusicApp\02_MusicApp.csproj", "{0D48ED98-8E1E-43CF-A9E3-86314335F731}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Shop(CourseWork)", "03_Shop(CourseWork)\03_Shop(CourseWork).csproj", "{B24E12D0-2433-4A89-900B-42615E3D5EE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Shop(CourseWork)", "03_Shop(CourseWork)\03_Shop(CourseWork).csproj", "{B24E12D0-2433-4A89-900B-42615E3D5EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_data_access", "04_data_access\04_data_access.csproj", "{06761D1F-F6D8-445B-A91E-06B7DFEB5861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_wpf_app", "05_wpf_app\05_wpf_app.csproj", "{7DAFCAC3-6827-45AA-8D1F-D0523BF344E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{B24E12D0-2433-4A89-900B-42615E3D5EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B24E12D0-2433-4A89-900B-42615E3D5EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B24E12D0-2433-4A89-900B-42615E3D5EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06761D1F-F6D8-445B-A91E-06B7DFEB5861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06761D1F-F6D8-445B-A91E-06B7DFEB5861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06761D1F-F6D8-445B-A91E-06B7DFEB5861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06761D1F-F6D8-445B-A91E-06B7DFEB5861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DAFCAC3-6827-45AA-8D1F-D0523BF344E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DAFCAC3-6827-45AA-8D1F-D0523BF344E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DAFCAC3-6827-45AA-8D1F-D0523BF344E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DAFCAC3-6827-45AA-8D1F-D0523BF344E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
